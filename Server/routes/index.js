@@ -1,13 +1,14 @@
 const express = require('express')
 const healthCtrl = require('../controllers/health');
-// const componentsRoutes = require('./components')
-
+const movieRoutes = require('./movie')
+const userRoutes = require('./user')
 const router = express.Router();
 
 /**Service Health Check API */
 router.get('/health-check', healthCtrl.checkConnection);
 
-// router.use('/component',componentsRoutes);
+router.use('/movie',movieRoutes);
+router.use('/user',userRoutes)
 
 
 exports= module.exports= router;
