@@ -1,15 +1,13 @@
 const express = require('express');
-const validate = require('express-validation');
-const paramValidation = require('../../config/param-validation')
 const router = express.Router();
-const ratingCtrl = require('../controllers/rating')
+const movieCtrl = require('../controllers/movie')
 const ratingRoute = require('./rating')
 
 router
     .route('/')
-    .get()
-    .post()
+    .get(movieCtrl.getMovie)
+    .post(movieCtrl.addMovie)
 
-router.use('/movie-rating',ratingRoute)
+router.use('/rating',ratingRoute)
 
 module.exports= router;

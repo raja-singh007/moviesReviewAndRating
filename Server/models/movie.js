@@ -15,7 +15,7 @@ const movieSchema = new Schema(
         category:{
             type:String,
             enum:['General','Horror','Scifi','Action','Adventure','Kids','18+'],
-            default:'cat01'
+            default:'General'
         },
         language:{
             type: String,

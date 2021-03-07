@@ -22,3 +22,5 @@ const ratingSchema = new Schema(
         },
     }
 )
+
+module.exports=mongoose.model('ratingSchema',ratingSchema);

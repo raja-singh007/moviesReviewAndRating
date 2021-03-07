@@ -1,4 +1,14 @@
 const express = require('express');
-const validate = require('express-validation');
-const paramValidation = require('../../config/param-validation')
+const ratingCtrl = require('../controllers/rating')
 const router = express.Router();
+
+router
+    .route('/')
+    .get(ratingCtrl.listRating)
+    .post(ratingCtrl.postRating)
+
+router
+    .route('/rating-calculation')
+    .get(ratingCtrl.calculateRating)
+
+module.exports= router;
