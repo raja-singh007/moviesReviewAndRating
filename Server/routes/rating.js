@@ -8,7 +8,7 @@ router
     .post(ratingCtrl.postRating)
 
 router
-    .route('/rating-calculation')
+    .route('/calculation')
     .get(ratingCtrl.calculateRating)
 
 module.exports= router;

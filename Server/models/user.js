@@ -18,6 +18,7 @@ const userSchema = new Schema(
             trim:true,
             unique: true,
         },
+        movieRated:[{type:mongoose.Schema.Types.ObjectId,ref:'movie'}]
     },
     {timestamps:true},
 
